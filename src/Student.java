@@ -17,20 +17,16 @@ public class Student extends Person implements Studyable {
 
     @Override
     public void displayDetails() {
-//        Name: Alice Johnson
-//Age: 20
-//Major: Computer Science
-//Alice Johnson is studying Computer Science
         System.out.println("Name: "+ firstName + " " + lastName);
         System.out.println("Age: "+ age);
         System.out.println("Major: "+ major);
         describeMajor();
         System.out.println();
-//        System.out.println(firstName + " " + lastName + " is studying " + major + ".");
+
     }
 
     @Override
     public void describeMajor() {
-        System.out.println(firstName + " " + lastName + " is studying " + major + ".");
+        System.out.println(super.getFullName() + " is studying " + major + ".");
     }
 }
